@@ -1,12 +1,14 @@
 # NFS Subdirectory External Provisioner Helm Chart
 
+_This is educational purpose chart_ for [NFS subdir external provisioner](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner) 
+
 The [NFS subdir external provisioner](https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner) is an automatic provisioner for Kubernetes that uses your *already configured* NFS server, automatically creating Persistent Volumes.
 
 ## TL;DR;
 
 ```console
-$ helm repo add nfs-subdir-external-provisioner https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner/
-$ helm install nfs-subdir-external-provisioner nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
+$ helm repo add k8s-edu https://k8s-edu.github.io/helm-charts
+$ helm install nfs-subdir-external-provisioner k8s-edu/nfs-subdir-external-provisioner \
     --set nfs.server=x.x.x.x \
     --set nfs.path=/exported/path
 ```
@@ -25,7 +27,7 @@ This charts installs custom [storage class](https://kubernetes.io/docs/concepts/
 To install the chart with the release name `my-release`:
 
 ```console
-$ helm install my-release nfs-subdir-external-provisioner/nfs-subdir-external-provisioner \
+$ helm install my-release k8s-edu/nfs-subdir-external-provisioner \
     --set nfs.server=x.x.x.x \
     --set nfs.path=/exported/path
 ```
