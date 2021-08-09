@@ -12,6 +12,38 @@ A network load-balancer implementation for Kubernetes using standard routing pro
 
 * <https://github.com/metallb/metallb>
 
+## tl;dr
+```bash
+# Add Chart Repository
+helm repo add edu https://k8s-edu.github.io/helm-charts
+helm repo update
+# install metallb
+helm install metallb edu/metallb 
+```
+
+A values file may be specified on installation. This is recommended for providing configs in Helm Values:
+
+```bash
+helm install metallb metallb/metallb -f values.yaml
+```
+
+if you want set metallb-configs are set in `values.yaml` under configInLine:
+```yaml
+configInline:
+  address-pools:
+   - name: default
+     protocol: layer2
+     addresses:
+     - 198.51.100.0/24
+```
+
+## install With Helm generated metallb-system namespace.
+```bash
+helm install metallb edu/metallb --create-namespace --namespace=metallb-system edu/metallb -f values.yaml
+```
+
+> Note: if you have an interest more for values specification, please refer to below contents.
+
 ## Values
 
 | Key | Type | Default | Description |
