@@ -7,7 +7,7 @@ The [NFS subdir external provisioner](https://github.com/kubernetes-sigs/nfs-sub
 ## TL;DR;
 
 ```console
-$ helm repo add k8s-edu https://k8s-edu.github.io/helm-charts
+$ helm repo add edu https://k8s-edu.github.io/helm-charts
 $ helm install nfs-subdir-external-provisioner k8s-edu/nfs-subdir-external-provisioner \
     --set nfs.server=x.x.x.x \
     --set nfs.path=/exported/path
