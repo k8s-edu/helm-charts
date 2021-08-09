@@ -39,7 +39,7 @@ configInline:
 
 ## install With Helm generated metallb-system namespace.
 ```bash
-helm install metallb edu/metallb --create-namespace --namespace=metallb-system edu/metallb -f values.yaml
+helm install metallb edu/metallb --create-namespace --namespace=metallb-system -f values.yaml
 ```
 
 > Note: if you have an interest more for values specification, please refer to below contents.
