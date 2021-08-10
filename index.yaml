@@ -3,7 +3,7 @@ entries:
   metallb:
   - apiVersion: v2
     appVersion: v0.10.2
-    created: "2021-08-10T09:05:37.4723652+09:00"
+    created: "2021-08-10T09:07:01.6839491+09:00"
     description: A network load-balancer implementation for Kubernetes using standard
       routing protocols
     digest: 0062a589471036ca888c78c01940579ae1c6a6f573c7edb6f96dc780a5759e0a
@@ -16,30 +16,10 @@ entries:
     urls:
     - metallb-0.10.2.tgz
     version: 0.10.2
-  - apiVersion: v2
-    appVersion: 0.8.2
-    created: "2021-08-10T09:05:37.4684644+09:00"
-    description: unofficial helm chart of MetalLB, bare-metal LoadBalancer
-    digest: d1f3b0b99b72a22bf2d99c5ec6b567cd446f855289a63f99762a7397db5df2c5
-    home: https://github.com/metallb/metallb
-    icon: https://iac-source.github.io/helm-charts/images/metallb-blue.png
-    maintainers:
-    - email: seongju.moon@linux.com
-      name: Seongju Moon
-    - email: genuwoo.j.shim@gmail.com
-      name: Genuwoo Shim
-    name: metallb
-    sources:
-    - https://github.com/metallb/metallb
-    - https://iac-source.github.io/helm-charts
-    type: application
-    urls:
-    - metallb-0.1.0.tgz
-    version: 0.1.0
   nfs-subdir-external-provisioner:
   - apiVersion: v1
     appVersion: 4.0.2
-    created: "2021-08-10T09:05:37.4811286+09:00"
+    created: "2021-08-10T09:07:01.6849254+09:00"
     description: nfs-subdir-external-provisioner is an automatic provisioner that
       used your *already configured* NFS server, automatically creating Persistent
       Volumes.
@@ -56,4 +36,4 @@ entries:
     urls:
     - nfs-subdir-external-provisioner-4.0.12.tgz
     version: 4.0.12
-generated: "2021-08-10T09:05:37.4655391+09:00"
+generated: "2021-08-10T09:07:01.6819972+09:00"
