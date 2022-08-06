@@ -1,0 +1,39 @@
+apiVersion: v1
+entries:
+  metallb:
+  - apiVersion: v2
+    appVersion: v0.10.2
+    created: "2022-08-07T07:49:21.9676851+09:00"
+    description: A network load-balancer implementation for Kubernetes using standard
+      routing protocols
+    digest: a33e2230a21e7df51c57b6816e2de8da3e6f5ac9a4688a3dbab6cf143cf7b970
+    home: https://metallb.universe.tf
+    icon: https://metallb.universe.tf/images/logo/metallb-white.png
+    name: metallb
+    sources:
+    - https://github.com/metallb/metallb
+    type: application
+    urls:
+    - metallb-0.10.2.tgz
+    version: 0.10.2
+  nfs-subdir-external-provisioner:
+  - apiVersion: v1
+    appVersion: 4.0.2
+    created: "2022-08-07T07:49:21.9696363+09:00"
+    description: nfs-subdir-external-provisioner is an automatic provisioner that
+      used your *already configured* NFS server, automatically creating Persistent
+      Volumes.
+    digest: c443d392cf050b893e50b354f4c8aaa2359486148dc33603d0a04d766f603fd1
+    home: https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner
+    keywords:
+    - nfs
+    - storage
+    - provisioner
+    kubeVersion: '>=1.9.0-0'
+    name: nfs-subdir-external-provisioner
+    sources:
+    - https://github.com/kubernetes-sigs/nfs-subdir-external-provisioner
+    urls:
+    - nfs-subdir-external-provisioner-4.0.12.tgz
+    version: 4.0.12
+generated: "2022-08-07T07:49:21.9661021+09:00"
