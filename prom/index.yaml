@@ -1,5 +1,37 @@
 apiVersion: v1
 entries:
+  fluent-bit:
+  - annotations:
+      artifacthub.io/changes: |
+        - kind: changed
+          description: "Updated Fluent Bit image to v1.9.9."
+    apiVersion: v1
+    appVersion: 1.9.9
+    created: "2022-10-07T18:18:53.3100014+09:00"
+    description: Fast and lightweight log processor and forwarder or Linux, OSX and
+      BSD family operating systems.
+    digest: 0f55cff8918a8951e4b244697ecfd95b92f736016411076125c2cb4e685e19aa
+    home: https://fluentbit.io/
+    icon: https://fluentbit.io/assets/img/logo1-default.png
+    keywords:
+    - logging
+    - fluent-bit
+    - fluentd
+    maintainers:
+    - email: eduardo@calyptia.com
+      name: edsiper
+    - email: naseem@transit.app
+      name: naseemkullah
+    - email: towmeykaw@gmail.com
+      name: Towmeykaw
+    - email: steve.hipwell@gmail.com
+      name: stevehipwell
+    name: fluent-bit
+    sources:
+    - https://github.com/fluent/fluent-bit/
+    urls:
+    - fluent-bit-0.20.9.tgz
+    version: 0.20.9
   kube-prometheus-stack:
   - annotations:
       artifacthub.io/links: |
@@ -10,7 +42,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.58.0
-    created: "2022-08-27T16:49:22.5046224+09:00"
+    created: "2022-10-07T18:18:53.3787561+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -62,7 +94,7 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 2.34.0
-    created: "2022-08-27T16:49:22.5172077+09:00"
+    created: "2022-10-07T18:18:53.3924512+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -92,4 +124,4 @@ entries:
     urls:
     - prometheus-15.8.5.tgz
     version: 15.8.5
-generated: "2022-08-27T16:49:22.4128784+09:00"
+generated: "2022-10-07T18:18:53.3043667+09:00"
