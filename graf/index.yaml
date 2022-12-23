@@ -3,7 +3,7 @@ entries:
   grafana:
   - apiVersion: v2
     appVersion: 9.2.4
-    created: "2022-12-19T02:52:49.8075093+09:00"
+    created: "2022-12-23T23:06:18.3564099+09:00"
     description: The leading tool for querying and visualizing time series and metrics.
     digest: dc45d75ff06f6ca82a3c7dc063ebe73f8e4c6126c5a131a51ed35294743eb087
     home: https://grafana.net
@@ -27,6 +27,53 @@ entries:
     urls:
     - grafana-6.43.5.tgz
     version: 6.43.5
+  jaeger:
+  - apiVersion: v2
+    appVersion: 1.39.0
+    created: "2022-12-23T23:06:18.3763564+09:00"
+    dependencies:
+    - condition: provisionDataStore.cassandra
+      name: cassandra
+      repository: https://charts.helm.sh/incubator
+      version: 0.15.3
+    - condition: provisionDataStore.elasticsearch
+      name: elasticsearch
+      repository: https://helm.elastic.co
+      version: ^7.11.1
+    - condition: provisionDataStore.kafka
+      name: kafka
+      repository: https://charts.bitnami.com/bitnami
+      version: ^18.0.8
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      version: 1.16.0
+    description: A Jaeger Helm chart for Kubernetes
+    digest: d8ad803c61b53405d39ddb212a62c16bdd7840fd60c8b839a91687ff9cb64c15
+    home: https://jaegertracing.io
+    icon: https://camo.githubusercontent.com/afa87494e0753b4b1f5719a2f35aa5263859dffb/687474703a2f2f6a61656765722e72656164746865646f63732e696f2f656e2f6c61746573742f696d616765732f6a61656765722d766563746f722e737667
+    keywords:
+    - jaeger
+    - opentracing
+    - tracing
+    - instrumentation
+    maintainers:
+    - email: david.vonthenen@dell.com
+      name: dvonthenen
+    - email: ankit.mehta@appian.com
+      name: mehta-ankit
+    - email: michael.lorant@fairfaxmedia.com.au
+      name: mikelorant
+    - email: naseem@transit.app
+      name: naseemkullah
+    - email: pavel.nikolov@fairfaxmedia.com.au
+      name: pavelnikolov
+    name: jaeger
+    sources:
+    - https://hub.docker.com/u/jaegertracing/
+    type: application
+    urls:
+    - jaeger-0.65.4.tgz
+    version: 0.65.4
   kube-prometheus-stack:
   - annotations:
       artifacthub.io/links: |
@@ -37,7 +84,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.58.0
-    created: "2022-12-19T02:52:49.9051115+09:00"
+    created: "2022-12-23T23:06:18.6147185+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -89,7 +136,7 @@ entries:
   loki-stack:
   - apiVersion: v1
     appVersion: v2.6.1
-    created: "2022-12-19T02:52:49.9216787+09:00"
+    created: "2022-12-23T23:06:18.6376568+09:00"
     dependencies:
     - condition: loki.enabled
       name: loki
@@ -136,7 +183,7 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 2.34.0
-    created: "2022-12-19T02:52:49.9304618+09:00"
+    created: "2022-12-23T23:06:18.6486271+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -166,4 +213,4 @@ entries:
     urls:
     - prometheus-15.8.5.tgz
     version: 15.8.5
-generated: "2022-12-19T02:52:49.7977257+09:00"
+generated: "2022-12-23T23:06:18.3444412+09:00"
