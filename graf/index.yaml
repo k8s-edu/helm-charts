@@ -3,7 +3,7 @@ entries:
   grafana:
   - apiVersion: v2
     appVersion: 9.2.4
-    created: "2022-12-23T23:06:18.3564099+09:00"
+    created: "2023-01-01T10:26:36.4018229+09:00"
     description: The leading tool for querying and visualizing time series and metrics.
     digest: dc45d75ff06f6ca82a3c7dc063ebe73f8e4c6126c5a131a51ed35294743eb087
     home: https://grafana.net
@@ -30,7 +30,7 @@ entries:
   jaeger:
   - apiVersion: v2
     appVersion: 1.39.0
-    created: "2022-12-23T23:06:18.3763564+09:00"
+    created: "2023-01-01T10:26:36.4470457+09:00"
     dependencies:
     - condition: provisionDataStore.cassandra
       name: cassandra
@@ -84,7 +84,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.58.0
-    created: "2022-12-23T23:06:18.6147185+09:00"
+    created: "2023-01-01T10:26:36.5328803+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -136,7 +136,7 @@ entries:
   loki-stack:
   - apiVersion: v1
     appVersion: v2.6.1
-    created: "2022-12-23T23:06:18.6376568+09:00"
+    created: "2023-01-01T10:26:36.5675771+09:00"
     dependencies:
     - condition: loki.enabled
       name: loki
@@ -183,7 +183,7 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 2.34.0
-    created: "2022-12-23T23:06:18.6486271+09:00"
+    created: "2023-01-01T10:26:36.5806937+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -213,4 +213,28 @@ entries:
     urls:
     - prometheus-15.8.5.tgz
     version: 15.8.5
-generated: "2022-12-23T23:06:18.3444412+09:00"
+  tempo:
+  - apiVersion: v2
+    appVersion: 1.5.0
+    created: "2023-01-01T10:26:36.5836208+09:00"
+    description: Grafana Tempo Single Binary Mode
+    digest: a74c8068ae6512ac5cb803586f9c8d461ba0876bc66fab78a87b0db7ae010e06
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/tempo/master/docs/tempo/website/logo_and_name.png
+    maintainers:
+    - email: number101010@gmail.com
+      name: joe-elliott
+    - email: 9215868@gmail.com
+      name: swartz-k
+    - name: annanay25
+    - name: mdisibio
+    - name: dgzlopes
+    - name: mapno
+    name: tempo
+    sources:
+    - https://github.com/grafana/tempo
+    type: application
+    urls:
+    - tempo-0.16.8.tgz
+    version: 0.16.8
+generated: "2023-01-01T10:26:36.3884623+09:00"
