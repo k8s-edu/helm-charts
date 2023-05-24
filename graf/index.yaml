@@ -3,7 +3,7 @@ entries:
   grafana:
   - apiVersion: v2
     appVersion: 9.2.4
-    created: "2023-01-01T10:26:36.4018229+09:00"
+    created: "2023-05-24T22:23:10.8711269+09:00"
     description: The leading tool for querying and visualizing time series and metrics.
     digest: dc45d75ff06f6ca82a3c7dc063ebe73f8e4c6126c5a131a51ed35294743eb087
     home: https://grafana.net
@@ -27,10 +27,28 @@ entries:
     urls:
     - grafana-6.43.5.tgz
     version: 6.43.5
+  influxdb2:
+  - apiVersion: v2
+    appVersion: 2.3.0
+    created: "2023-05-24T22:23:10.8733094+09:00"
+    description: A Helm chart for InfluxDB v2
+    digest: af5bf55f07e03b94cc275f606f00198512aea467a41c329fead1216344ebd360
+    home: https://www.influxdata.com/products/influxdb/
+    icon: https://avatars0.githubusercontent.com/u/5713248?s=200&v=4
+    maintainers:
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    name: influxdb2
+    type: application
+    urls:
+    - influxdb2-2.1.1.tgz
+    version: 2.1.1
   jaeger:
   - apiVersion: v2
     appVersion: 1.39.0
-    created: "2023-01-01T10:26:36.4470457+09:00"
+    created: "2023-05-24T22:23:10.899263+09:00"
     dependencies:
     - condition: provisionDataStore.cassandra
       name: cassandra
@@ -84,7 +102,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.58.0
-    created: "2023-01-01T10:26:36.5328803+09:00"
+    created: "2023-05-24T22:23:10.9503191+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -136,7 +154,7 @@ entries:
   loki-stack:
   - apiVersion: v1
     appVersion: v2.6.1
-    created: "2023-01-01T10:26:36.5675771+09:00"
+    created: "2023-05-24T22:23:10.9780245+09:00"
     dependencies:
     - condition: loki.enabled
       name: loki
@@ -183,7 +201,7 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 2.34.0
-    created: "2023-01-01T10:26:36.5806937+09:00"
+    created: "2023-05-24T22:23:10.9887655+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -213,10 +231,36 @@ entries:
     urls:
     - prometheus-15.8.5.tgz
     version: 15.8.5
+  telegraf-ds:
+  - apiVersion: v1
+    appVersion: 1.26.3
+    created: "2023-05-24T22:23:10.9926599+09:00"
+    description: Telegraf is an agent written in Go for collecting, processing, aggregating,
+      and writing metrics.
+    digest: db987b205714b5049a37890ba130b03a3dd78f9ae8fd592672b3ca10806c4721
+    home: https://www.influxdata.com/time-series-platform/telegraf/
+    keywords:
+    - telegraf
+    - collector
+    - timeseries
+    - influxdata
+    maintainers:
+    - email: rawkode@influxdata.com
+      name: rawkode
+    - email: giacomo@influxdata.com
+      name: gitirabassi
+    - email: contact@cerenit.fr
+      name: nsteinmetz
+    name: telegraf-ds
+    sources:
+    - https://github.com/influxdata/helm-charts/charts/telegraf-ds
+    urls:
+    - telegraf-ds-1.1.10.tgz
+    version: 1.1.10
   tempo:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-01-01T10:26:36.5836208+09:00"
+    created: "2023-05-24T22:23:11.000481+09:00"
     description: Grafana Tempo Single Binary Mode
     digest: a74c8068ae6512ac5cb803586f9c8d461ba0876bc66fab78a87b0db7ae010e06
     home: https://grafana.net
@@ -237,4 +281,4 @@ entries:
     urls:
     - tempo-0.16.8.tgz
     version: 0.16.8
-generated: "2023-01-01T10:26:36.3884623+09:00"
+generated: "2023-05-24T22:23:10.8555496+09:00"
