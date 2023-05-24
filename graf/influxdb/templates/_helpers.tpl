@@ -35,13 +35,12 @@ Create chart name and version as used by the chart label.
 Common labels
 */}}
 {{- define "influxdb.labels" -}}
-app.kubernetes.io/name: {{ include "influxdb.name" . }}
-app.kubernetes.io/instance: {{ .Release.Name }}
+helm.sh/chart: {{ include "influxdb.chart" . }}
+{{ include "influxdb.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
 app.kubernetes.io/managed-by: {{ .Release.Service }}
-helm.sh/chart: {{ include "influxdb.chart" . }}
 {{- end -}}
 
 {{/*

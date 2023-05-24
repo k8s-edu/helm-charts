@@ -16,9 +16,7 @@ spec:
   tls:
     - hosts:
       - {{ .Values.ingress.hostname | quote }}
-      {{- if .Values.ingress.secretName }}
       secretName: {{ .Values.ingress.secretName }}
-      {{- end -}}
 {{- end }}
 {{- if .Values.ingress.className }}
   ingressClassName: {{ .Values.ingress.className }}
@@ -36,9 +34,9 @@ spec:
           service:
             name: {{ include "influxdb.fullname" . }}
             port:
-              name: {{ .Values.service.portName }}
+              number: 8086
 {{- else }}
           serviceName: {{ include "influxdb.fullname" . }}
-          servicePort: {{ .Values.service.portName }}
+          servicePort: 8086
 {{- end }}
 {{- end -}}
