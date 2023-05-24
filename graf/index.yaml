@@ -3,7 +3,7 @@ entries:
   grafana:
   - apiVersion: v2
     appVersion: 9.2.4
-    created: "2023-05-24T22:23:10.8711269+09:00"
+    created: "2023-05-24T22:53:35.198184+09:00"
     description: The leading tool for querying and visualizing time series and metrics.
     digest: dc45d75ff06f6ca82a3c7dc063ebe73f8e4c6126c5a131a51ed35294743eb087
     home: https://grafana.net
@@ -27,28 +27,37 @@ entries:
     urls:
     - grafana-6.43.5.tgz
     version: 6.43.5
-  influxdb2:
-  - apiVersion: v2
-    appVersion: 2.3.0
-    created: "2023-05-24T22:23:10.8733094+09:00"
-    description: A Helm chart for InfluxDB v2
-    digest: af5bf55f07e03b94cc275f606f00198512aea467a41c329fead1216344ebd360
-    home: https://www.influxdata.com/products/influxdb/
-    icon: https://avatars0.githubusercontent.com/u/5713248?s=200&v=4
+  influxdb:
+  - apiVersion: v1
+    appVersion: 1.8.10
+    created: "2023-05-24T22:53:35.2001469+09:00"
+    description: Scalable datastore for metrics, events, and real-time analytics.
+    digest: 901e2e02a40103c3890a11d5db9f8695d15fe3d6721c5c5227a42e54aecc7d59
+    home: https://www.influxdata.com/time-series-platform/influxdb/
+    keywords:
+    - influxdb
+    - database
+    - timeseries
+    - influxdata
     maintainers:
     - email: rawkode@influxdata.com
       name: rawkode
     - email: giacomo@influxdata.com
       name: gitirabassi
-    name: influxdb2
-    type: application
+    - email: urakiny@gmail.com
+      name: aisuko
+    - email: naseem@transit.app
+      name: naseemkullah
+    name: influxdb
+    sources:
+    - https://github.com/influxdata/influxdb
     urls:
-    - influxdb2-2.1.1.tgz
-    version: 2.1.1
+    - influxdb-4.12.1.tgz
+    version: 4.12.1
   jaeger:
   - apiVersion: v2
     appVersion: 1.39.0
-    created: "2023-05-24T22:23:10.899263+09:00"
+    created: "2023-05-24T22:53:35.2186444+09:00"
     dependencies:
     - condition: provisionDataStore.cassandra
       name: cassandra
@@ -102,7 +111,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: 0.58.0
-    created: "2023-05-24T22:23:10.9503191+09:00"
+    created: "2023-05-24T22:53:35.2538181+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -154,7 +163,7 @@ entries:
   loki-stack:
   - apiVersion: v1
     appVersion: v2.6.1
-    created: "2023-05-24T22:23:10.9780245+09:00"
+    created: "2023-05-24T22:53:35.2742755+09:00"
     dependencies:
     - condition: loki.enabled
       name: loki
@@ -201,7 +210,7 @@ entries:
   prometheus:
   - apiVersion: v2
     appVersion: 2.34.0
-    created: "2023-05-24T22:23:10.9887655+09:00"
+    created: "2023-05-24T22:53:35.280386+09:00"
     dependencies:
     - condition: kubeStateMetrics.enabled
       name: kube-state-metrics
@@ -234,7 +243,7 @@ entries:
   telegraf-ds:
   - apiVersion: v1
     appVersion: 1.26.3
-    created: "2023-05-24T22:23:10.9926599+09:00"
+    created: "2023-05-24T22:53:35.2821577+09:00"
     description: Telegraf is an agent written in Go for collecting, processing, aggregating,
       and writing metrics.
     digest: db987b205714b5049a37890ba130b03a3dd78f9ae8fd592672b3ca10806c4721
@@ -260,7 +269,7 @@ entries:
   tempo:
   - apiVersion: v2
     appVersion: 1.5.0
-    created: "2023-05-24T22:23:11.000481+09:00"
+    created: "2023-05-24T22:53:35.284084+09:00"
     description: Grafana Tempo Single Binary Mode
     digest: a74c8068ae6512ac5cb803586f9c8d461ba0876bc66fab78a87b0db7ae010e06
     home: https://grafana.net
@@ -281,4 +290,4 @@ entries:
     urls:
     - tempo-0.16.8.tgz
     version: 0.16.8
-generated: "2023-05-24T22:23:10.8555496+09:00"
+generated: "2023-05-24T22:53:35.1942813+09:00"
