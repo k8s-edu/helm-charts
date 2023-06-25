@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  kwok:
+  - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2023-06-25T16:24:14.9810379+09:00"
+    description: A Helm chart for kwok cluster
+    digest: 5dd1dc2da7e886fe79c311c35cf526c819f7fa2c2eadd0aaf2fa7e8a294723b2
+    name: kwok
+    type: application
+    urls:
+    - kwok-0.1.0.tgz
+    version: 0.1.0
   metallb:
   - apiVersion: v2
     appVersion: v0.10.2
-    created: "2022-08-07T07:49:21.9676851+09:00"
+    created: "2023-06-25T16:24:14.9839645+09:00"
     description: A network load-balancer implementation for Kubernetes using standard
       routing protocols
     digest: a33e2230a21e7df51c57b6816e2de8da3e6f5ac9a4688a3dbab6cf143cf7b970
@@ -19,7 +30,7 @@ entries:
   nfs-subdir-external-provisioner:
   - apiVersion: v1
     appVersion: 4.0.2
-    created: "2022-08-07T07:49:21.9696363+09:00"
+    created: "2023-06-25T16:24:14.9849421+09:00"
     description: nfs-subdir-external-provisioner is an automatic provisioner that
       used your *already configured* NFS server, automatically creating Persistent
       Volumes.
@@ -36,4 +47,4 @@ entries:
     urls:
     - nfs-subdir-external-provisioner-4.0.12.tgz
     version: 4.0.12
-generated: "2022-08-07T07:49:21.9661021+09:00"
+generated: "2023-06-25T16:24:14.9800608+09:00"
