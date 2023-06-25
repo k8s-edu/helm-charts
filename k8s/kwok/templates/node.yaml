@@ -1,0 +1,22 @@
+# Origin source https://github.com/kubernetes-sigs/kwok
+
+{{- range (untilStep 1 (add 1 .Values.kwok.node.count | int ) 1 ) }}
+{{ $nodeName := ( printf "kwok-w%d-k8s" . ) }}
+apiVersion: v1
+kind: Node
+metadata:
+  annotations:
+    kwok.x-k8s.io/node: {{ $nodeName }}
+    node.alpha.kubernetes.io/ttl: "0"
+  labels:
+    beta.kubernetes.io/arch: amd64
+    beta.kubernetes.io/os: linux
+    kubernetes.io/arch: amd64
+    kubernetes.io/hostname: {{ $nodeName }}
+    kubernetes.io/os: linux
+    kubernetes.io/role: agent
+    node-role.kubernetes.io/agent: ""
+    type: kwok-controller
+  name: {{ $nodeName }}
+---
+{{- end }}
