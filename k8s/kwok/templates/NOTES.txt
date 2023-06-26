@@ -1,2 +1,2 @@
-1. Get the status of kwok-node by this command:
-kubectl get nodes 
+1. Get the status of kwok-nodes by this command:
+kubectl get nodes --sort-by=.metadata.name
