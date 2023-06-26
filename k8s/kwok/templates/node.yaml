@@ -1,7 +1,7 @@
 # Origin source https://github.com/kubernetes-sigs/kwok
 
 {{- range (untilStep 1 (add 1 .Values.kwok.node.count | int ) 1 ) }}
-{{ $nodeName := ( printf "kwok-w%d-k8s" . ) }}
+{{ $nodeName := ( printf "w%d-k8s" . ) }}
 apiVersion: v1
 kind: Node
 metadata:
